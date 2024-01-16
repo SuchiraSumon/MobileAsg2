@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}iPortfolio - Contact{% endblock %}
+
+{% block content %}
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title mt-5">
+                <h2 class="mb-3">Contact Us</h2>
+                <p>Feel free to reach out to us. We'd love to hear from you!</p>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-4 mt-4 text-center">
+                    <div class="card" style="background-color: #EBE7E4;">
+                        <img src="/static/images/ezu.png" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;" class="card-img-top img-fluid mx-auto mt-3" alt="Nur Ezurin Farisha">
+                        <div class="card-body">
+                            <h5 class="card-title">Nur Ezurin Farisha</h5>
+                            <p class="card-text">3rd Year Student & Bachelor Of Computer Science</p>
+                            <p class="card-text">Email: ezurinfarisha02@gmail.com</p>
+                            <p class="card-text">Phone: 017-4057022</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mt-4 text-center">
+                    <div class="card" style="background-color: #EBE7E4;">
+                        <img src="/static/images/thivya.png" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;" class="card-img-top img-fluid mx-auto mt-3" alt="Thivya Sri Sivakumar">
+                        <div class="card-body">
+                            <h5 class="card-title">Thivya Sri Sivakumar</h5>
+                            <p class="card-text">3rd Year Student & Bachelor Of Computer Science</p>
+                            <p class="card-text">Email: thivyasri@gmail.com</p>
+                            <p class="card-text">Phone: +601741731321</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mt-4 text-center">
+                    <div class="card" style="background-color: #EBE7E4;">
+                        <img src="/static/images/chira.png" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;" class="card-img-top img-fluid mx-auto mt-3" alt="Suchira A/P Sumon">
+                        <div class="card-body">
+                            <h5 class="card-title">Suchira A/P Sumon</h5>
+                            <p class="card-text">3rd Year Student & Bachelor Of Computer Science</p>
+                            <p class="card-text">Email: chira2072002@gmail.com</p>
+                            <p class="card-text">Phone: +60139872679</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-8 offset-md-2">
+                    <div class="contact-form-container" style="background-color: #FFF1E7; padding: 30px; border-radius: 10px; margin-top: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                        <h3 class="text-center mb-4">Send a Message</h3>
+                <form action="{{ url_for('contact') }}" method="post" role="form">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                    </div>
+                    <div class="text-center mt-3"> <!-- Added margin to the button -->
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+{% endblock %}

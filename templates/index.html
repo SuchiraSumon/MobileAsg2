@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <!-- ======= Person Section ======= -->
+  <section id="hero" class="hero">
+    <div class="container-fluid p-0" data-aos="zoom-in" data-aos-delay="100">
+      <div class="hero-images">
+        <img src="/static/images/ezu.png" class="img-fluid hero-img" alt="Nur Ezurin Farisha">
+        <img src="/static/images/thivya.png" class="img-fluid hero-img" alt="Thivya Sri Sivakumar">
+        <img src="/static/images/chira.png" class="img-fluid hero-img" alt="Suchira A/P Sumon">
+      </div>
+    </div>
+    <div class="container-fluid hero-content">
+      <!-- Wording below the illusion -->
+      <div class="container text-center mt-3" style="height: 240px;"> <!-- Adjusted height value -->
+        <h2>Welcome to Our iPortfolio</h2>
+        <p>Embark on a Journey with Three Computer Science Enthusiasts</p>
+        <a href="{{ url_for('mainpage') }}" class="btn-about">Learn More</a>
+      </div>
+    </div>
+  </section><!-- End Person -->
+
+{% endblock %}

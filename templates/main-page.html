@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about mt-4"> <!-- Added mt-4 class for top margin -->
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Our Members</h2>
+        </div>
+
+      <!-- Person 1: Nur Ezurin Farisha -->
+      <div class="section-title">
+        <h2>Nur Ezurin Farisha</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 offset-lg-1"> <!-- Adjusted grid classes -->
+          <img src="/static/images/ezu.png" class="img-fluid smaller-img" alt="Nur Ezurin Farisha">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 content">
+          <h3>About Me</h3>
+          <p>
+            Computer Science Enthusiast<br>
+            Dedicated full-time student with a passion for IT.
+          </p>
+          <div class="my-3"> <!-- Added margin for separation -->
+            <a href="{{ url_for('portfolio') }}" class="btn btn-portfolio">View Portfolio</a>
+          </div>
+          <div class="my-3"> <!-- Added margin for separation -->
+            <a href="{{ url_for('show_hobby', student_id=1) }}" class="btn btn-hobby">View Hobbies</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add some spacing between each person's section -->
+      <div class="my-5"></div>
+
+      <!-- Person 2: Thivya Sri Sivakumar -->
+      <div class="section-title">
+        <h2>Thivya Sri Sivakumar</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 offset-lg-1"> <!-- Adjusted grid classes -->
+          <img src="/static/images/thivya.png" class="img-fluid smaller-img" alt="Thivya Sri Sivakumar">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 content">
+          <h3>About Me</h3>
+          <p>
+            Software Developer<br>
+            Meticulous, analytical, and a fast learner.
+          </p>
+          <div class="my-3"> <!-- Added margin for separation -->
+            <a href="{{ url_for('portfolio') }}" class="btn btn-portfolio">View Portfolio</a>
+          </div>
+          <div class="my-3"> <!-- Added margin for separation -->
+            <a href="{{ url_for('show_hobby', student_id=2) }}" class="btn btn-hobby">View Hobbies</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add some spacing between each person's section -->
+      <div class="my-5"></div>
+
+      <!-- Person 3: Suchira A/P Sumon -->
+      <div class="section-title">
+        <h2>Suchira A/P Sumon</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 offset-lg-1"> <!-- Adjusted grid classes -->
+          <img src="/static/images/chira.png" class="img-fluid smaller-img" alt="Suchira A/P Sumon">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 content">
+          <h3>About Me</h3>
+          <p>
+            Software Designer<br>
+            Experienced in designing computer programs and interfaces.
+          </p>
+          <div class="my-3"> 
+            <a href="{{ url_for('portfolio') }}" class="btn btn-portfolio">View Portfolio</a>
+          </div>
+          <div class="my-3"> 
+            <a href="{{ url_for('show_hobby', student_id=3) }}" class="btn btn-hobby">View Hobbies</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <style>
+  
+    .smaller-img {
+      max-width: 100%; /* Ensure the image doesn't exceed its parent container */
+      margin-right: 15px; /* Adjust the margin as needed */   
+      max-height: 350px; /* Set a maximum height for consistency */
+    }
+
+    .btn {
+      background-color: #007bff; /* Default button color */
+      color: #fff; /* Text color */
+      padding: 10px 20px; 
+      border-radius: 5px; 
+      text-decoration: none; 
+      display: inline-block;
+    }
+
+    .btn-hobby {
+      background-color: #ff8c00; /
+    }
+  </style>
+
+{% endblock %}

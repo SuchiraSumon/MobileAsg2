@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Hobbies Section ======= -->
+    <section id="hobbies" class="hobbies">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Our Hobbies</h2>
+          <p>Discover our hobbies and interests.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          {% for student in students %}
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="{{ loop.index * 100 }}">
+            <div class="icon-box {{ loop.cycle('iconbox-blue', 'iconbox-orange', 'iconbox-pink') }}">
+              <img src="{{ url_for('static', filename='images/' + student['image']) }}" class="img-fluid rounded-circle" alt="{{ student['name'] }}">
+              <h4><a href="#">{{ student['name'] }}</a></h4>
+              {% for hobby in student['hobbies'] %}
+              <p class="hobby-icon"><i class="bx bx-code"></i> {{ hobby }}</p>
+              {% endfor %}
+              <p class="hobby-details">{{ student['details'] }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End Hobbies Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}
